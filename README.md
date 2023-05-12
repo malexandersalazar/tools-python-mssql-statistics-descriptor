@@ -28,7 +28,7 @@ We will also need to download and install the ODBC Driver for SQL Server, this r
 | --- | --- |
 | -h, --help | show this help message and exit |
 | -u, --user | database-user, server-admin@contoso.com |
-| -p, --password | specifies the user password, required only at non-interactive login' |
+| -p, --password | specifies the user password, required only at non-interactive login |
 | -r, --rows | specifies the number of rows to sample from the table (default: 500000) |
 | -l, --level | specifies the database object level in which the analysis should be executed, "s" for schema and "t" for table (default: "s") |
 | -t, --table | specifies the database table name |
