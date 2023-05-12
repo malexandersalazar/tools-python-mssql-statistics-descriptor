@@ -18,13 +18,13 @@ We will also need to download and install the ODBC Driver for SQL Server, this r
 
 ## Getting Started
 
-| Positional arguments | Example |
+| Positional argument | Example |
 | --- | --- |
 | server | tcp:my-sqldbs-dev.database.windows.net |
 | database | sqldb-adventureworkslt-dev |
 | schema | MySchema |
 
-| Optional arguments | Example/Description |
+| Option | Example/Description |
 | --- | --- |
 | -h, --help | show this help message and exit |
 | -u, --user | database-user, server-admin@contoso.com |
