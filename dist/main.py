@@ -63,15 +63,14 @@ if(LEVEL=='s'):
                         tables.append((f'{SCHEMA}.{table_name}',rows,data,index_size))
                 schema_row = schema_cur.fetchone()
 else:
-    with create_connection() as conn1:
-        with create_connection() as conn2:
-            with conn2.cursor() as space_cur:
-                space_cur.execute(f"EXEC sp_spaceused N'{SCHEMA}.{TABLE}'") # result columns: name rows reserved data index_size unused
-                space_row = space_cur.fetchone()
-                rows = str(space_row[1])
-                data = str(space_row[3]) 
-                index_size = str(space_row[4]) 
-                tables.append((f'{SCHEMA}.{TABLE}',rows,data,index_size))
+    with create_connection() as conn2:
+        with conn2.cursor() as space_cur:
+            space_cur.execute(f"EXEC sp_spaceused N'{SCHEMA}.{TABLE}'") # result columns: name rows reserved data index_size unused
+            space_row = space_cur.fetchone()
+            rows = str(space_row[1])
+            data = str(space_row[3]) 
+            index_size = str(space_row[4]) 
+            tables.append((f'{SCHEMA}.{TABLE}',rows,data,index_size))
 
 if not os.path.exists('obj'):
     os.mkdir('obj')
