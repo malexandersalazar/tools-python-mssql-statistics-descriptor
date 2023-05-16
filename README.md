@@ -49,7 +49,7 @@ The program will build and save locally high-density HTML visualizations and gen
 If we need a correlation graph to be generated for the columns of each table, we must include the `--associations` flag.
 
 ```
-python main.py tcp:my-sqldbs-dev.database.windows.net sqldb-adventureworkslt-dev SalesLT -u=database-user -p=S3cUr3P@S$w0rD -r=10000--associations
+python main.py tcp:my-sqldbs-dev.database.windows.net sqldb-adventureworkslt-dev SalesLT -u=database-user -p=S3cUr3P@S$w0rD -r=10000 --associations
 ```
 
 We must consider that correlations and other associations may take a **quadratic time (n^2)** to complete.
@@ -72,7 +72,7 @@ python main.py tcp:my-sqldbs-dev.database.windows.net sqldb-adventureworkslt-dev
 
 ## Prerequisites
 
-Snowflake Statistics Descriptor was tested with:
+MSSQL Statistics Descriptor was tested with:
 
 * Python: 3.7.16
 * Packages:
